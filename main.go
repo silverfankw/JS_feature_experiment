@@ -17,6 +17,10 @@ func main() {
 	router.LoadHTMLGlob("./*.html")
 
 	router.GET("", func(c *gin.Context) {
+		c.HTML(http.StatusOK, "index2.html", nil)
+	})
+
+	router.GET("1", func(c *gin.Context) {
 		c.HTML(http.StatusOK, "index.html", nil)
 	})
 
