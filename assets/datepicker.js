@@ -1,15 +1,16 @@
 // Set up datepicker toggle functionality
 
-$("#datepicker").hide();
+// $("#datepicker").hide();
 
-$("#btn").click(function(){
-    
-    $("#datepicker").toggle();
-}); 
 
-$("#datepicker").datepicker({ 
-      onSelect: function(value, date) { 
-         alert('The chosen date is ' + value); 
-         $("#datepicker").hide(); 
-      } 
+
+$("#btn").click(function () {
+   $("#textbox").datepicker({
+      container: "#container",
+      orientation: "bottom",
+      onSelect: function (value, date) {
+         alert('The chosen date is ' + value);
+      }
+   }).focus();
 });
+

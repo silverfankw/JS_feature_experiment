@@ -17,11 +17,15 @@ func main() {
 	router.LoadHTMLGlob("./*.html")
 
 	router.GET("", func(c *gin.Context) {
-		c.HTML(http.StatusOK, "index2.html", nil)
+		c.HTML(http.StatusOK, "index.html", nil)
 	})
 
 	router.GET("1", func(c *gin.Context) {
-		c.HTML(http.StatusOK, "index.html", nil)
+		c.HTML(http.StatusOK, "datepicker.html", nil)
+	})
+
+	router.GET("2", func(c *gin.Context) {
+		c.HTML(http.StatusOK, "lodash.html", nil)
 	})
 
 	// Run service at set port
